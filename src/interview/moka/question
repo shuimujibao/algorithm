@@ -6,6 +6,17 @@
 
 2.线上虚拟机监控的参数有哪些
 
+ -Xms2048M      --->
+ -Xmx2048M      --->
+ -XX:PermSize=512M      --->
+ -XX:MaxPermSize=1024m      --->
+ -verbose:GC        --->
+ -XX:+PrintGCDetails        --->
+ -XX:+PrintGCDateStamps     --->
+ -XX:+PrintGCApplicationStoppedTime     --->
+ -Xloggc:/**s/gc.log        --->
+ -Djava.security.egd=file:/dev/./urandom"       --->
+
 3.哪些对象会进入老年代
 
 4.什么样的大对象会直接进入老年代
