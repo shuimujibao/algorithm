@@ -1,11 +1,11 @@
-package base.map;
+package interview.moka;
 
 /**
  * @author sunxiaoyu3
  * @description TODO
- * @createTime 2020/08/24 22:05:00
+ * @createTime 2020/08/25 11:10:00
  */
-public class test {
+public class Question {
     public static void main(String[] args) {
         String str1 = "12435";
         String str2 = "4221";
