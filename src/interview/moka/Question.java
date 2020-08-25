@@ -9,8 +9,12 @@ public class Question {
     public static void main(String[] args) {
         String str1 = "12435";
         String str2 = "4221";
+
+        int l1 = Integer.parseInt(str1);
+        int l2 = Integer.parseInt(str2);
         String res = handle(str1, str2);
         System.out.println("求和结果：" + res);
+        System.out.println(l1 + l2);
     }
 
     private static String handle(String str1, String str2) {
