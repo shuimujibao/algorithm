@@ -19,6 +19,9 @@ public class ListNode {
         this.node = node;
     }
 
+    public ListNode() {
+    }
+
     /**
      * @param node
      */

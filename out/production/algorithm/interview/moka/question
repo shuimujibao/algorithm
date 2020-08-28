@@ -6,16 +6,24 @@
 
 2.线上虚拟机监控的参数有哪些
 
- -Xms2048M      --->
- -Xmx2048M      --->
- -XX:PermSize=512M      --->
- -XX:MaxPermSize=1024m      --->
- -verbose:GC        --->
- -XX:+PrintGCDetails        --->
- -XX:+PrintGCDateStamps     --->
- -XX:+PrintGCApplicationStoppedTime     --->
- -Xloggc:/**s/gc.log        --->
- -Djava.security.egd=file:/dev/./urandom"       --->
+ ${JAVA_HOME}/bin/java
+ -Djava.awt.headless=true
+ -Djava.net.preferIPv4Stack=true
+ -Djava.app.home=${JAVAAPP_HOME}
+ -Dlogs.base=${JAVAAPP_LOG_DIR}
+ -Dorg.jboss.netty.epollBugWorkaround=true
+ -Dreactor.netty.ioWorkerCount=12
+ -Dreactor.netty.http.server.accessLogEnabled=true
+ -Dsun.net.client.defaultConnectTimeout=10000
+ -Dsun.net.client.defaultReadTimeout=30000
+ -server -Xmx${XMX:-1024}m -Xms${XMS:-1024}m -Xmn${XMN:-512}m -Xss512K
+ -XX:MaxDirectMemorySize=2048m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m
+ -XX:+UseParNewGC -XX:SurvivorRatio=10 -XX:+UseConcMarkSweepGC -XX:+UseCMSCompactAtFullCollection -XX:CMSMaxAbortablePrecleanTime=5000
+ -XX:ParallelGCThreads=4 -XX:+CMSClassUnloadingEnabled -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly -XX:+ExplicitGCInvokesConcurrent
+ -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${JAVAAPP_LOG_DIR}/java.hprof
+ -Xloggc:${JAVAAPP_LOG_DIR}/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+ -jar ${JAVAAPP_HOME}/boot/cloud-api-gateway-server.jar
+ --spring.config.additional-location=${JAVAAPP_HOME}/conf
 
 3.哪些对象会进入老年代
 
