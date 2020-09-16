@@ -10,4 +10,4 @@
 10.如何给线程重命名
 11.rocketMq的broker分片过程
 12.你项目中分布式的实现原理，redLock的实现原理
-13.ThreadLock咋回事
+13.ThreadLocal咋回事
