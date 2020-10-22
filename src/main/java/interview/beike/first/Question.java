@@ -1,4 +1,6 @@
-package interview.beike;
+package interview.beike.first;
+
+import interview.beike.first.FatherQuestion;
 
 /**
  * @author sunxiaoyu3

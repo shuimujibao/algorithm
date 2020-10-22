@@ -1,4 +1,4 @@
-package interview.beike;
+package interview.beike.first;
 
 /**
  * @author sunxiaoyu3

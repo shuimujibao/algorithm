@@ -1,4 +1,4 @@
-package interview.beike.Anonymousfunction;
+package interview.beike.first.Anonymousfunction;
 
 /**
  * @author sunxiaoyu3

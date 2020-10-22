@@ -1,4 +1,7 @@
-package interview.beike;
+package interview.beike.first;
+
+import interview.beike.first.FatherQuestion;
+import interview.beike.first.Question;
 
 /**
  * @author sunxiaoyu3
@@ -10,7 +13,7 @@ public class Test {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         ClassLoader questionClassLoader = Question.class.getClassLoader();
         System.out.println(questionClassLoader);
-        FatherQuestion fatherQuestion = (FatherQuestion)questionClassLoader.loadClass("interview.beike.FatherQuestion").newInstance();
+        FatherQuestion fatherQuestion = (FatherQuestion)questionClassLoader.loadClass("interview.beike.first.FatherQuestion").newInstance();
         System.out.println(fatherQuestion);
     }
 }
