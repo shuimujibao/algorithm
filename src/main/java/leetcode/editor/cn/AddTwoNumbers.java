@@ -15,7 +15,6 @@ package leetcode.editor.cn;
 // Related Topics 链表 数学 
 // 👍 5141 👎 0
 
-import util.node.ListNode;
 
 public class AddTwoNumbers{
     public static void main(String[] args) {
