@@ -26,7 +26,7 @@ package leetcode.editor.cn;
 // Related Topics 排序 哈希表 双指针 二分查找 
 // 👍 241 👎 0
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class IntersectionOfTwoArrays {
@@ -38,6 +38,7 @@ public class IntersectionOfTwoArrays {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[] intersection(int[] nums1, int[] nums2) {
+            Arrays.sort(nums1);
             HashSet<Integer> set1 = new HashSet<Integer>();
             for (Integer n : nums1) set1.add(n);
             HashSet<Integer> set2 = new HashSet<Integer>();
