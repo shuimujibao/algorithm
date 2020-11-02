@@ -46,7 +46,27 @@
 (2)不可重复读  是什么
 (3)和幻读的区别是什么
 4.RocketMq的广播模式和集群模式有什么区别
+
 5.Rocket如何保证顺序消费
++------------------------------------------------------------------+
++------------------------------------------------------------------+
+消费模型就是单 consumer 实例 + 多 worker 线程模型
+RocketMQ 会为每个队列分配一个 PullRequest，并将其放入 pullRequestQueue，
+PullMessageService 线程会不断轮询从 pullRequestQueue 中取出 PullRequest 去拉取消息，接着将拉取到的消息给到 ConsumeMessageService 处理，ConsumeMessageService 有两个子接口：
+ConsumeMessageConcurrentlyService
+ConsumeMessageOrderlyService
++------------------------------------------------------------------+
++------------------------------------------------------------------+
+
+ConsumeMessageConcurrentlyService 内部有一个线程池，用于并发消费，同样地，
+如果需要顺序消费，那么 RocketMQ 提供了 ConsumeMessageOrderlyService 类进行顺序消息消费处理。
+
+1）RocketMQ 会为每个消息队列建一个对象锁，这样只要线程池中有该消息队列在处理，则需等待处理完才能进行下一次消费，保证在当前 Consumer 内，同一队列的消息进行串行消费。
+
+2）向 Broker 端请求锁定当前顺序消费的队列，防止在消费过程中被分配给其它消费者处理从而打乱消费顺序。
+
+
+
 6.Rocket每个节点会存放全量数据吗，如何分到不同的broker
 7.sct    netty  多路复用有了解过吗    eventloop  channel  注册时间
 8.io多路复用的好处
