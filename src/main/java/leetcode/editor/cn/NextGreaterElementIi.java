@@ -17,6 +17,8 @@ package leetcode.editor.cn;
 // Related Topics 栈 
 // 👍 212 👎 0
 
+import java.util.Stack;
+
 public class NextGreaterElementIi {
     public static void main(String[] args) {
         Solution solution = new NextGreaterElementIi().new Solution();
@@ -26,7 +28,34 @@ public class NextGreaterElementIi {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[] nextGreaterElements(int[] nums) {
-            return null;
+            Stack<Integer> stack1 = new Stack<>();
+            Stack<Integer> stack2 = new Stack<>();
+            int[] ans = new int[nums.length];
+            int x = -1;
+            for(int i = 0;i<nums.length;i++){
+                while(!stack1.empty() && nums[i] > stack1.peek()){
+                    int y = stack2.pop();
+                    stack1.pop();
+                    ans[y] = nums[i];
+                }
+                if(stack1.empty())
+                    x = i;
+                stack1.push(nums[i]);
+                stack2.push(i);
+            }
+            for (int i = 0;i<=x;i++){
+                while(!stack1.empty() && nums[i] > stack1.peek()){
+                    int y = stack2.pop();
+                    stack1.pop();
+                    ans[y] = nums[i];
+                }
+
+            }
+            while(!stack2.empty()){
+                int z = stack2.pop();
+                ans[z] = -1;
+            }
+            return ans;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
