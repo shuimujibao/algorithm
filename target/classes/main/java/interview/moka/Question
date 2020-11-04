@@ -1,0 +1,40 @@
+1.简单介绍项目
+
+答:book定制化操作（rocketMq分布式事物）
+   book内元素构造（模板方法模式）
+   book多人操作冲突提醒（netty-websocket）
+
+2.线上虚拟机监控的参数有哪些
+
+ ${JAVA_HOME}/bin/java
+ -Djava.awt.headless=true
+ -Djava.net.preferIPv4Stack=true
+ -Djava.app.home=${JAVAAPP_HOME}
+ -Dlogs.base=${JAVAAPP_LOG_DIR}
+ -Dorg.jboss.netty.epollBugWorkaround=true
+ -Dreactor.netty.ioWorkerCount=12
+ -Dreactor.netty.http.server.accessLogEnabled=true
+ -Dsun.net.client.defaultConnectTimeout=10000
+ -Dsun.net.client.defaultReadTimeout=30000
+ -server -Xmx${XMX:-1024}m -Xms${XMS:-1024}m -Xmn${XMN:-512}m -Xss512K
+ -XX:MaxDirectMemorySize=2048m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=512m
+ -XX:+UseParNewGC -XX:SurvivorRatio=10 -XX:+UseConcMarkSweepGC -XX:+UseCMSCompactAtFullCollection -XX:CMSMaxAbortablePrecleanTime=5000
+ -XX:ParallelGCThreads=4 -XX:+CMSClassUnloadingEnabled -XX:CMSInitiatingOccupancyFraction=80 -XX:+UseCMSInitiatingOccupancyOnly -XX:+ExplicitGCInvokesConcurrent
+ -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${JAVAAPP_LOG_DIR}/java.hprof
+ -Xloggc:${JAVAAPP_LOG_DIR}/gc.log -XX:+PrintGCDetails -XX:+PrintGCDateStamps
+ -jar ${JAVAAPP_HOME}/boot/cloud-api-gateway-server.jar
+ --spring.config.additional-location=${JAVAAPP_HOME}/conf
+
+3.哪些对象会进入老年代
+
+4.什么样的大对象会直接进入老年代
+
+5.mysql的数据库隔离级别为啥选择已提交读 为什么不选择可重复读
+
+6.间隙锁如何升级为表锁
+
+7.如何实现扣库存的操作（利用redis的原子性）
+
+8.如何利用AOP实现接口耗时问题
+
+
