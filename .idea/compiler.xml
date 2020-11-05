@@ -2,17 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="framework" />
         <module name="eruka" />
         <module name="record" />
+        <module name="product" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="algorithm" target="1.8" />
       <module name="eruka" target="1.8" />
+      <module name="framework" target="1.8" />
+      <module name="framework-a" target="1.5" />
+      <module name="product" target="1.8" />
       <module name="record" target="1.8" />
       <module name="system" target="1.5" />
     </bytecodeTargetLevel>
@@ -21,6 +27,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="algorithm" options="" />
       <module name="eruka" options="-parameters" />
+      <module name="framework" options="-parameters" />
+      <module name="product" options="-parameters" />
+      <module name="record" options="-parameters" />
     </option>
   </component>
 </project>
