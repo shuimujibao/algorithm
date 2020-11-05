@@ -6,16 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="algorithm" />
+        <module name="eruka" />
+        <module name="record" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="algorithm" target="1.8" />
+      <module name="eruka" target="1.8" />
+      <module name="record" target="1.8" />
+      <module name="system" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="algorithm" options="" />
+      <module name="eruka" options="-parameters" />
     </option>
   </component>
 </project>
