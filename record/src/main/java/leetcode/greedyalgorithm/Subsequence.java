@@ -1,4 +1,4 @@
-package  leetcode.greedyalgorithm;
+package leetcode.greedyalgorithm;
 
 /**
  * @author sunxiaoyu3

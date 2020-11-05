@@ -1,4 +1,4 @@
-package  designpatterns.action.template;
+package designpatterns.action.template;
 
 import designpatterns.product.Fruit;
 

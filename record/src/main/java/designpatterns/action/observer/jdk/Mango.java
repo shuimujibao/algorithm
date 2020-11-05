@@ -1,4 +1,4 @@
-package  designpatterns.action.observer.jdk;
+package designpatterns.action.observer.jdk;
 
 import java.util.Observable;
 

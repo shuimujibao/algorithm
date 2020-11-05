@@ -1,4 +1,4 @@
-package  leetcode.reviewSort;
+package leetcode.reviewSort;
 
 public class QuickSort {
     public static void sort(int[] arr) {

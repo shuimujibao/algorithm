@@ -1,4 +1,4 @@
-package  designpatterns.action.template;
+package designpatterns.action.template;
 
 import designpatterns.action.strategy.Discount;
 import designpatterns.action.strategy.FullDiscount;

@@ -1,4 +1,4 @@
-package  leetcode.sort;
+package leetcode.sort;
 
 import util.data.Swap;
 

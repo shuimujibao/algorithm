@@ -24,7 +24,7 @@ public class ClassTest {
 
         Field inner = one.getDeclaredField("inner");
         inner.setAccessible(true);
-        inner.set(oneObject,"world");
+        inner.set(oneObject, "world");
         System.out.println(oneObject.inner);
     }
 

@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //设计和构建一个“最近最少使用”缓存，该缓存会删除最近最少使用的项目。缓存应该从键映射到值(允许你插入和检索特定键对应的值)，并在初始化时指定最大容量。当缓存
 //被填满时，它应该删除最近最少使用的项目。 
@@ -29,32 +29,33 @@ package  leetcode.editor.cn;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LruCacheLcci{
+public class LruCacheLcci {
     public static void main(String[] args) {
 
     }
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class LRUCache extends LinkedHashMap<Integer,Integer> {
-    private int capacity;
-    public LRUCache(int capacity) {
-        super(capacity, 0.75F, true);
-        this.capacity = capacity;
-    }
-    
-    public int get(int key) {
-        return super.getOrDefault(key, -1);
-    }
-    
-    public void put(int key, int value) {
-        super.put(key, value);
-    }
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class LRUCache extends LinkedHashMap<Integer, Integer> {
+        private int capacity;
 
-    @Override
-    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
-        return size() > capacity;
+        public LRUCache(int capacity) {
+            super(capacity, 0.75F, true);
+            this.capacity = capacity;
+        }
+
+        public int get(int key) {
+            return super.getOrDefault(key, -1);
+        }
+
+        public void put(int key, int value) {
+            super.put(key, value);
+        }
+
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
+            return size() > capacity;
+        }
     }
-}
 
 /**
  * Your LRUCache object will be instantiated and called as such:

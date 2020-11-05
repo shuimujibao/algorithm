@@ -1,4 +1,4 @@
-package  designpatterns.create.builder;
+package designpatterns.create.builder;
 
 
 import designpatterns.product.fruit.Apple;

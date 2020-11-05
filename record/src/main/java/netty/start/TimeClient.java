@@ -1,4 +1,4 @@
-package  netty.start;
+package netty.start;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -48,6 +48,6 @@ public class TimeClient {
                 //采用默认值
             }
         }
-        new TimeClient().connect(port,"127.0.0.1");
+        new TimeClient().connect(port, "127.0.0.1");
     }
 }

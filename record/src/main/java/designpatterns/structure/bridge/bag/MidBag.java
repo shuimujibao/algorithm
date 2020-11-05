@@ -1,4 +1,4 @@
-package  designpatterns.structure.bridge.bag;
+package designpatterns.structure.bridge.bag;
 
 public class MidBag extends BagAbstraction {
     @Override

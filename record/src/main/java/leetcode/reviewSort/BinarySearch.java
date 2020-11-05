@@ -1,4 +1,4 @@
-package  leetcode.reviewSort;
+package leetcode.reviewSort;
 
 /**
  * @Auther: tal
@@ -43,7 +43,7 @@ public class BinarySearch {
                 high = middle - 1;
             } else if (arr[middle] < key) {
                 low = middle + 1;
-            }else {
+            } else {
                 return middle;
             }
         }

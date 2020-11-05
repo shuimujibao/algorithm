@@ -1,4 +1,4 @@
-package  netty.bio;
+package netty.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,18 +36,18 @@ public class TimeClient {
         } catch (Exception e) {
             //不需要处理
         } finally {
-           if(out != null){
-               out.close();
-               out = null;
-           }
-           if(in != null){
-               in.close();
-           }
-           in = null;
-           if(socket != null){
-             socket.close();
-           }
-           socket = null;
+            if (out != null) {
+                out.close();
+                out = null;
+            }
+            if (in != null) {
+                in.close();
+            }
+            in = null;
+            if (socket != null) {
+                socket.close();
+            }
+            socket = null;
         }
     }
 }

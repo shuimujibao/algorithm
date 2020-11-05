@@ -1,4 +1,4 @@
-package  leetcode.binarysearch;
+package leetcode.binarysearch;
 
 /**
  * @author sunxiaoyu3

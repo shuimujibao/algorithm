@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //假设你是一位很棒的家长，想要给你的孩子们一些小饼干。但是，每个孩子最多只能给一块饼干。 
 //
@@ -42,28 +42,28 @@ package  leetcode.editor.cn;
 
 import java.util.Arrays;
 
-public class AssignCookies{
+public class AssignCookies {
     public static void main(String[] args) {
         Solution solution = new AssignCookies().new Solution();
-        
+
     }
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int findContentChildren(int[] g, int[] s) {
-        if (g == null || s == null) return 0;
-        Arrays.sort(g);
-        Arrays.sort(s);
-        int gi = 0, si = 0;
-        while (gi < g.length && si < s.length) {
-            if (g[gi] <= s[si]) {
-                gi++;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int findContentChildren(int[] g, int[] s) {
+            if (g == null || s == null) return 0;
+            Arrays.sort(g);
+            Arrays.sort(s);
+            int gi = 0, si = 0;
+            while (gi < g.length && si < s.length) {
+                if (g[gi] <= s[si]) {
+                    gi++;
+                }
+                si++;
             }
-            si++;
+            return gi;
         }
-        return gi;
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

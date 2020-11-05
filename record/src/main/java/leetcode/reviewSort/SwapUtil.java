@@ -1,4 +1,4 @@
-package  leetcode.reviewSort;
+package leetcode.reviewSort;
 
 public class SwapUtil {
     public static void swap(int[] arr, int i, int j) {

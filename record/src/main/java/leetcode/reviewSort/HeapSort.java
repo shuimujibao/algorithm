@@ -1,4 +1,4 @@
-package  leetcode.reviewSort;
+package leetcode.reviewSort;
 
 public class HeapSort {
     public static void sort(int[] arr) {

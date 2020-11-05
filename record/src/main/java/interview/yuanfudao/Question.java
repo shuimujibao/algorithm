@@ -1,4 +1,4 @@
-package  interview.yuanfudao;
+package interview.yuanfudao;
 
 import java.util.Arrays;
 import java.util.Stack;

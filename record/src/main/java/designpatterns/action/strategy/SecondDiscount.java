@@ -1,4 +1,4 @@
-package  designpatterns.action.strategy;
+package designpatterns.action.strategy;
 
 public class SecondDiscount implements Discount {
     @Override

@@ -1,4 +1,4 @@
-package  designpatterns.structure.decorator;
+package designpatterns.structure.decorator;
 
 import designpatterns.product.Bag;
 

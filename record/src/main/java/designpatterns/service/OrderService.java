@@ -1,4 +1,4 @@
-package  designpatterns.service;
+package designpatterns.service;
 
 public interface OrderService {
     int saveOrder();

@@ -1,4 +1,4 @@
-package  designpatterns.create.factory.simple;
+package designpatterns.create.factory.simple;
 
 
 import designpatterns.product.Fruit;

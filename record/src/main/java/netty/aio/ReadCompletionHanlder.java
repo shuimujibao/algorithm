@@ -1,4 +1,4 @@
-package  netty.aio;
+package netty.aio;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class ReadCompletionHanlder implements CompletionHandler<Integer, ByteBuffer> {
     /**
-     *用于读取半包消息和发送应答
+     * 用于读取半包消息和发送应答
      */
     private AsynchronousSocketChannel channel;
 

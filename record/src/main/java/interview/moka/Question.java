@@ -1,4 +1,4 @@
-package  interview.moka;
+package interview.moka;
 
 /**
  * @author sunxiaoyu3

@@ -1,4 +1,4 @@
-package  interview.beike.first.Anonymousfunction;
+package interview.beike.first.Anonymousfunction;
 
 /**
  * @author sunxiaoyu3
@@ -6,7 +6,6 @@ package  interview.beike.first.Anonymousfunction;
  * @createTime 2020/09/27 15:05:00
  */
 public class ExternalClass {
-
 
 
     public static void main(String[] args) {

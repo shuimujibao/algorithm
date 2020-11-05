@@ -5,7 +5,8 @@ import designpatterns.action.template.ShoppingCart;
 import designpatterns.create.factory.simple.StaticFactory;
 import designpatterns.product.Fruit;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : itw_sunxy

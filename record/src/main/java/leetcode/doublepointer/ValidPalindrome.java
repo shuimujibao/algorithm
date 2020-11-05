@@ -1,4 +1,4 @@
-package  leetcode.doublepointer;
+package leetcode.doublepointer;
 
 /**
  * @auther: sunxiaoyu

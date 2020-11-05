@@ -1,4 +1,4 @@
-package  interview.genshuixue;
+package interview.genshuixue;
 
 /**
  * @author sunxiaoyu3

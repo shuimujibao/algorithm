@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //编写一个函数，以字符串作为输入，反转该字符串中的元音字母。 
 //

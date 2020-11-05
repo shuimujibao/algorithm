@@ -1,4 +1,4 @@
-package  designpatterns.structure.facade;
+package designpatterns.structure.facade;
 
 import designpatterns.structure.composite.DistrictNode;
 

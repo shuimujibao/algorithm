@@ -1,4 +1,4 @@
-package  designpatterns.product.fruit;
+package designpatterns.product.fruit;
 
 import designpatterns.product.Fruit;
 

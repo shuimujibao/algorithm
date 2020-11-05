@@ -1,4 +1,4 @@
-package  designpatterns.structure.bridge.material;
+package designpatterns.structure.bridge.material;
 
 public class Plastic implements Material {
     @Override

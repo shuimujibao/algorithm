@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //在二维空间中有许多球形的气球。对于每个气球，提供的输入是水平方向上，气球直径的开始和结束坐标。由于它是水平的，所以纵坐标并不重要，因此只要知道开始和结束的横
 //坐标就足够了。开始坐标总是小于结束坐标。 
@@ -60,30 +60,30 @@ package  leetcode.editor.cn;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class MinimumNumberOfArrowsToBurstBalloons{
+public class MinimumNumberOfArrowsToBurstBalloons {
     public static void main(String[] args) {
         Solution solution = new MinimumNumberOfArrowsToBurstBalloons().new Solution();
-        
+
     }
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int findMinArrowShots(int[][] points) {
-        if (points.length == 0) {
-            return 0;
-        }
-        Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
-        int cnt = 1, end = points[0][1];
-        for (int i = 1; i < points.length; i++) {
-            if (points[i][0] <= end) {
-                continue;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int findMinArrowShots(int[][] points) {
+            if (points.length == 0) {
+                return 0;
             }
-            cnt++;
-            end = points[i][1];
+            Arrays.sort(points, Comparator.comparingInt(o -> o[1]));
+            int cnt = 1, end = points[0][1];
+            for (int i = 1; i < points.length; i++) {
+                if (points[i][0] <= end) {
+                    continue;
+                }
+                cnt++;
+                end = points[i][1];
+            }
+            return cnt;
         }
-        return cnt;
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

@@ -1,4 +1,4 @@
-package  netty.nio;
+package netty.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -65,7 +65,7 @@ public class TimeClientHandle implements Runnable {
                 if (sc.finishConnect()) {
                     sc.register(selector, SelectionKey.OP_READ);
                     doWrite(sc);
-                }else {
+                } else {
                     //连接失败，进程推出
                     System.exit(1);
                 }

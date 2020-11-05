@@ -1,4 +1,4 @@
-package  leetcode.sort;
+package leetcode.sort;
 
 import java.util.ArrayList;
 import java.util.HashMap;

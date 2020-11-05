@@ -1,4 +1,4 @@
-package  designpatterns.structure.facade;
+package designpatterns.structure.facade;
 
 public class CustomerClient {
     public static void main(String[] args) {

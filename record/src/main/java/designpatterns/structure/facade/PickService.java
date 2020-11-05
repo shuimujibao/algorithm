@@ -1,4 +1,4 @@
-package  designpatterns.structure.facade;
+package designpatterns.structure.facade;
 
 import designpatterns.structure.bridge.bag.BagAbstraction;
 import designpatterns.structure.bridge.bag.SmallBag;

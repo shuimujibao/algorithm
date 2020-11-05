@@ -1,4 +1,4 @@
-package  designpatterns.create.factory.abstractFactory;
+package designpatterns.create.factory.abstractFactory;
 
 
 import designpatterns.product.Bag;

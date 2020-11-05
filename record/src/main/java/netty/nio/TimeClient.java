@@ -1,4 +1,4 @@
-package  netty.nio;
+package netty.nio;
 
 import java.io.IOException;
 

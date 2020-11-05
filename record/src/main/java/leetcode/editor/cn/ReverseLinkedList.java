@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //反转一个单链表。 
 //
@@ -11,8 +11,6 @@ package  leetcode.editor.cn;
 //你可以迭代或递归地反转链表。你能否用两种方法解决这道题？ 
 // Related Topics 链表 
 // 👍 1309 👎 0
-
-import java.util.Stack;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {
@@ -33,17 +31,17 @@ public class ReverseLinkedList {
     class Solution {
         public ListNode reverseList(ListNode head) {
 
-            if(head == null)
+            if (head == null)
                 return null;
             ListNode preListNode = null;
             ListNode nowListNode = head;
 
 
-            while(nowListNode != null){
+            while (nowListNode != null) {
                 ListNode nextListNode = nowListNode.next;   //保存下一个结点
                 nowListNode.next = preListNode;             //当前结点指向前一个结点
                 preListNode = nowListNode;                  //前任结点 到现任节点
-                nowListNode = nextListNode;					//现任节点到下一结点
+                nowListNode = nextListNode;                    //现任节点到下一结点
             }
             return preListNode;
         }

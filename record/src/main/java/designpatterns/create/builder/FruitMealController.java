@@ -1,4 +1,4 @@
-package  designpatterns.create.builder;
+package designpatterns.create.builder;
 
 public class FruitMealController { //收银台-- 导演类
     public void construct() {

@@ -1,4 +1,4 @@
-package  leetcode.doublepointer;
+package leetcode.doublepointer;
 
 /**
  * @author sunxiaoyu
@@ -32,7 +32,7 @@ public class JudgeSquareSum {
     }
 
     public static void main(String[] args) {
-        JudgeSquareSum arr =new JudgeSquareSum();
+        JudgeSquareSum arr = new JudgeSquareSum();
         System.out.println(arr.judgeSquareSum(3));
     }
 }

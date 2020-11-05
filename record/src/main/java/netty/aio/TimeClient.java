@@ -1,4 +1,4 @@
-package  netty.aio;
+package netty.aio;
 
 /**
  * @Auther: sunxiaoyu
@@ -10,9 +10,9 @@ public class TimeClient {
         int port = 8080;
         try {
             port = Integer.valueOf(args[0]);
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             //采取默认值
         }
-        new Thread(new AsyncTimeClienyHandler("127.0.0.1",port),"AIP-AsyncTimeClientHandler-001").start();
+        new Thread(new AsyncTimeClienyHandler("127.0.0.1", port), "AIP-AsyncTimeClientHandler-001").start();
     }
 }

@@ -1,4 +1,4 @@
-package  designpatterns.create.singleton;
+package designpatterns.create.singleton;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

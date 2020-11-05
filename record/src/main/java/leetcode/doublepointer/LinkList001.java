@@ -1,4 +1,4 @@
-package  leetcode.doublepointer;
+package leetcode.doublepointer;
 
 import util.node.ListNode;
 
@@ -20,21 +20,22 @@ public class LinkList001 {
      * 链表初始化
      */
     public static void init() {
-        for(int i=0;i<10;i++) {
+        for (int i = 0; i < 10; i++) {
             add(new ListNode(i, null));
         }
     }
 
     /**
      * 为了生成环需要取到环节点的指针
+     *
      * @param i
      * @return
      */
     public static ListNode getNode(int i) {
         int count = 0;
         ListNode temp = head;
-        while(temp.next != null) {
-            if(count == i) {
+        while (temp.next != null) {
+            if (count == i) {
                 //return temp;
                 break;
             }
@@ -46,17 +47,18 @@ public class LinkList001 {
 
     /**
      * 链表的添加
+     *
      * @param node
      */
     public static void add(ListNode node) {
         ListNode temp = head;
 
-        if(head == null) {
+        if (head == null) {
             head = node;
             return;
         }
 
-        while(temp.next != null) {
+        while (temp.next != null) {
             temp = temp.next;
         }
         temp.next = node;
@@ -76,7 +78,7 @@ public class LinkList001 {
 
         int count = 0;
 
-        while(temp.next != null) {
+        while (temp.next != null) {
             buff.append("->");
             temp = temp.next;
             buff.append(temp.node);
@@ -84,7 +86,7 @@ public class LinkList001 {
 
             count++;
 
-            if(count == 20) {
+            if (count == 20) {
                 break;
             }
         }
@@ -92,23 +94,24 @@ public class LinkList001 {
 
     /**
      * 判断链表是否有环
+     *
      * @param node
      * @return
      */
     public static boolean isLinkedCycle(ListNode node) {
 
-        if(node == null) {
+        if (node == null) {
             return false;
         }
 
         ListNode fast = node;
         ListNode slow = node;
 
-        while(fast.next != null && fast.next.next != null) {
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
-            if(slow == fast) {
+            if (slow == fast) {
                 return true;
             }
         }

@@ -1,4 +1,4 @@
-package  leetcode.reviewSort;
+package leetcode.reviewSort;
 
 public class MergeSort {
     //归并需要的辅助数组

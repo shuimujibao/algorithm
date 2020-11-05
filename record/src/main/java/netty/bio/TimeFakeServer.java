@@ -1,4 +1,4 @@
-package  netty.bio;
+package netty.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -25,7 +25,7 @@ public class TimeFakeServer {
             System.out.println("The time is start in port : " + port);
             Socket socket = null;
             //创建I/O任务线程池
-            TimeServerHandlerExecutePool singleExecuter = new TimeServerHandlerExecutePool(50,1000);
+            TimeServerHandlerExecutePool singleExecuter = new TimeServerHandlerExecutePool(50, 1000);
             while (true) {
                 socket = server.accept();
                 singleExecuter.execute(new TimeServerHandler(socket));

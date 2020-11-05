@@ -1,4 +1,4 @@
-package  designpatterns.action.observer;
+package designpatterns.action.observer;
 
 public class MangoAttention extends Attentions {
     @Override

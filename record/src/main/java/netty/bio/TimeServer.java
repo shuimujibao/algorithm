@@ -1,4 +1,4 @@
-package  netty.bio;
+package netty.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;

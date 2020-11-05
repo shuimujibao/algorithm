@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。 
 //
@@ -44,31 +44,31 @@ package  leetcode.editor.cn;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class NonOverlappingIntervals{
+public class NonOverlappingIntervals {
     public static void main(String[] args) {
         Solution solution = new NonOverlappingIntervals().new Solution();
-        
+
     }
 
-//leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int eraseOverlapIntervals(int[][] intervals) {
-        if (intervals.length == 0) {
-            return 0;
-        }
-        Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
-        int cnt = 1;
-        int end = intervals[0][1];
-        for (int i = 1; i < intervals.length; i++) {
-            if (intervals[i][0] < end) {
-                continue;
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int eraseOverlapIntervals(int[][] intervals) {
+            if (intervals.length == 0) {
+                return 0;
             }
-            end = intervals[i][1];
-            cnt++;
+            Arrays.sort(intervals, Comparator.comparingInt(o -> o[1]));
+            int cnt = 1;
+            int end = intervals[0][1];
+            for (int i = 1; i < intervals.length; i++) {
+                if (intervals[i][0] < end) {
+                    continue;
+                }
+                end = intervals[i][1];
+                cnt++;
+            }
+            return intervals.length - cnt;
         }
-        return intervals.length - cnt;
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

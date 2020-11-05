@@ -1,4 +1,4 @@
-package  leetcode.editor.cn;
+package leetcode.editor.cn;
 
 //给定一个字符串，请将字符串里的字符按照出现的频率降序排列。 
 //

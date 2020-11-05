@@ -1,4 +1,4 @@
-package  netty.aio;
+package netty.aio;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

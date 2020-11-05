@@ -1,4 +1,4 @@
-package  designpatterns.create.singleton;
+package designpatterns.create.singleton;
 
 public class a {
 }

@@ -1,4 +1,4 @@
-package  leetcode.greedyalgorithm;
+package leetcode.greedyalgorithm;
 
 import util.data.TwoDimensionalArray;
 

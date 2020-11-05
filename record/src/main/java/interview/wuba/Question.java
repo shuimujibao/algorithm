@@ -1,4 +1,4 @@
-package  interview.wuba;
+package interview.wuba;
 
 import util.node.ListNode;
 import util.node.MyLink;

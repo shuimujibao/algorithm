@@ -1,4 +1,4 @@
-package  designpatterns.structure.proxy;
+package designpatterns.structure.proxy;
 
 import designpatterns.service.OrderService;
 

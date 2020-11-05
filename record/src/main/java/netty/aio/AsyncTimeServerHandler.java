@@ -1,4 +1,4 @@
-package  netty.aio;
+package netty.aio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -29,13 +29,13 @@ public class AsyncTimeServerHandler implements Runnable {
 
     @Override
     public void run() {
-      latch = new CountDownLatch(1);
-      //接受客户端的连接
-      doAccept();
-      latch.countDown();
+        latch = new CountDownLatch(1);
+        //接受客户端的连接
+        doAccept();
+        latch.countDown();
     }
 
     private void doAccept() {
-        asynchronousServerSocketChannel.accept(this,new AcceptCompletionHandler());
+        asynchronousServerSocketChannel.accept(this, new AcceptCompletionHandler());
     }
 }

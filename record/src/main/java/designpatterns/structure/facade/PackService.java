@@ -1,4 +1,4 @@
-package  designpatterns.structure.facade;
+package designpatterns.structure.facade;
 
 import designpatterns.create.factory.abstractFactory.AbstractFactory;
 import designpatterns.create.factory.abstractFactory.OrangeFactory;

@@ -1,4 +1,4 @@
-package  designpatterns.structure.bridge;
+package designpatterns.structure.bridge;
 
 import designpatterns.structure.bridge.bag.BagAbstraction;
 import designpatterns.structure.bridge.bag.SmallBag;

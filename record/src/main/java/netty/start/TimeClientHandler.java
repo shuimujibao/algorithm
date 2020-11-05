@@ -1,4 +1,4 @@
-package  netty.start;
+package netty.start;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -24,9 +24,9 @@ public class TimeClientHandler extends ChannelHandlerAdapter {
     }
 
     /**
-     *  客户端和服务端TCP链路建立成功之后，Netty的Nio线程会调用channelActive方法，发送查询时间的指令给服务端，
-     *  调用ChannelHandlerContext的writeAndFlush方法将请求消息发送给服务端
-     *  当服务端返回应答的消息时，channelRead方法被调用，从Netty的ByteBuf中读取并打印信息
+     * 客户端和服务端TCP链路建立成功之后，Netty的Nio线程会调用channelActive方法，发送查询时间的指令给服务端，
+     * 调用ChannelHandlerContext的writeAndFlush方法将请求消息发送给服务端
+     * 当服务端返回应答的消息时，channelRead方法被调用，从Netty的ByteBuf中读取并打印信息
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

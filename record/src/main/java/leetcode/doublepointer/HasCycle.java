@@ -1,4 +1,4 @@
-package  leetcode.doublepointer;
+package leetcode.doublepointer;
 
 import util.node.ListNode;
 

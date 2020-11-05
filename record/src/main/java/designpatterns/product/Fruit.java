@@ -1,4 +1,4 @@
-package  designpatterns.product;
+package designpatterns.product;
 
 public interface Fruit {
     void draw();

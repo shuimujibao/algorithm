@@ -1,4 +1,4 @@
-package  designpatterns.product.bag;
+package designpatterns.product.bag;
 
 import designpatterns.product.Bag;
 

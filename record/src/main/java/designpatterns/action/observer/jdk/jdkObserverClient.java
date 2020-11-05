@@ -1,4 +1,4 @@
-package  designpatterns.action.observer.jdk;
+package designpatterns.action.observer.jdk;
 
 public class jdkObserverClient {
     public static void main(String[] args) {

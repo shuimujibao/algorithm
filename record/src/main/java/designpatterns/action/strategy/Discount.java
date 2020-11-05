@@ -1,4 +1,4 @@
-package  designpatterns.action.strategy;
+package designpatterns.action.strategy;
 
 /**
  * @author : itw_sunxy

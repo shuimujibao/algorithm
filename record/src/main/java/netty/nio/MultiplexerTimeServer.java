@@ -1,4 +1,4 @@
-package  netty.nio;
+package netty.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -131,12 +131,12 @@ public class MultiplexerTimeServer implements Runnable {
     }
 
     private void doWrite(SocketChannel channel, String response) throws IOException {
-        if(response != null && response.trim().length() > 0){
-          byte[] bytes = response.getBytes();
-          ByteBuffer writeBuffer = ByteBuffer.allocate(bytes.length);
-          writeBuffer.put(bytes);
-          writeBuffer.flip();
-          channel.write(writeBuffer);
+        if (response != null && response.trim().length() > 0) {
+            byte[] bytes = response.getBytes();
+            ByteBuffer writeBuffer = ByteBuffer.allocate(bytes.length);
+            writeBuffer.put(bytes);
+            writeBuffer.flip();
+            channel.write(writeBuffer);
         }
     }
 }

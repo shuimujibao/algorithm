@@ -1,4 +1,4 @@
-package  designpatterns.structure.adapter;
+package designpatterns.structure.adapter;
 
 import designpatterns.product.bag.AppleBag;
 import designpatterns.product.bag.OrangeBag;
