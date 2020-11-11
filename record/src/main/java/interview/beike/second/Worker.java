@@ -27,15 +27,12 @@ public class Worker implements Runnable {
 
     @Override
     public void run() {
-
         synchronized (Worker.class) {
             while (currentNum < maxMount) {
-                if(threadMount % threadNo == 0){
-
-                }
                 currentNum++;
                 System.out.println("当前线程ID : " + Thread.currentThread().getName() + " +------+  currentNum :" + currentNum);
             }
+
         }
     }
 
