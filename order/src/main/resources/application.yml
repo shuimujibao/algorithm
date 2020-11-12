@@ -1,3 +1,4 @@
+#服务信息
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -6,5 +7,16 @@ spring:
     password: Left@sun23.
   jpa:
     show-sql: true
+  application:
+    name: order
 server:
   port: 9012
+#eruka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#ribbon客户端负载
+ribbon:
+  eureka:
+    enabled: true

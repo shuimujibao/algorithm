@@ -30,7 +30,7 @@ public class ProductController {
     @RequestMapping("/findByCategoryType")
     public ResponseEntity batchExportPdf(@RequestBody ProductDto productDto) {
         try {
-            return new ResponseEntity<>(Result.buildSuccessResult(productService.findByCategoryType(productDto.getCategoryId())), HttpStatus.OK);
+            return new ResponseEntity<>(Result.buildSuccessResult(productService.findByCategoryType(productDto.getCategoryId()), "获取商品种类信息成功."), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             throw e;
