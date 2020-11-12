@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author sunxiaoyu3
- * @description 商品
+ * @description 订单
  * @createTime 2020/11/05 19:50:00
  */
 @Service
@@ -18,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
     OrderCategoryRepository orderCategoryRepository;
 
     @Override
-    public OrderCategory findByCategoryType(Integer categoryId) {
-        return orderCategoryRepository.getOne(categoryId);
+    public OrderCategory findByCategoryType(Integer orderId) {
+        return orderCategoryRepository.getOne(orderId);
     }
 }

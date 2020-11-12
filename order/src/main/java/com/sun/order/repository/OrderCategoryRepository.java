@@ -14,25 +14,25 @@ public interface OrderCategoryRepository extends JpaRepository<OrderCategory, In
     /**
      * 通过类别编号查询
      *
-     * @param categoryType 类别编号查询
+     * @param orderType 类别编号查询
      * @return OrderCategory
      */
-    OrderCategory findByCategoryType(Integer categoryType);
+    OrderCategory findByOrderType(Integer orderType);
 
     /**
      * 通过类别id查询
      *
-     * @param categoryId id
+     * @param orderId id
      * @return OrderCategory
      */
-    OrderCategory findByCategoryId(Integer categoryId);
+    OrderCategory findByOrderId(Integer orderId);
 
     /**
      * 通过类别编号范围得到列表
      *
-     * @param categoryTypes 类别编号范围
+     * @param orderTypes 类别编号范围
      * @return List<OrderCategory>
      */
-    List<OrderCategory> findByCategoryTypeIn(List<Integer> categoryTypes);
+    List<OrderCategory> findByOrderTypeIn(List<Integer> orderTypes);
 
 }

@@ -31,7 +31,15 @@ public class OrderCategory {
      * 类别编号
      */
     @Column(name = "order_type")
-    private Integer categoryType;
+    private Integer orderType;
 
+    public OrderCategory() {
+    }
+
+
+    public OrderCategory(String orderName, Integer orderType) {
+        this.orderName = orderName;
+        this.orderType = orderType;
+    }
 
 }

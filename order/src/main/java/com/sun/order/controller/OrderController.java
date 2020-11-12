@@ -15,11 +15,11 @@ import javax.annotation.Resource;
 
 /**
  * @author sunxiaoyu3
- * @description 商品
+ * @description 订单
  * @createTime 2020/11/05 19:45:00
  */
 @RestController
-@RequestMapping("product")
+@RequestMapping("order")
 @Slf4j
 public class OrderController {
 
@@ -27,10 +27,10 @@ public class OrderController {
     OrderService productService;
 
     @ResponseBody
-    @RequestMapping("/findByCategoryType")
+    @RequestMapping("/findByOrderId")
     public ResponseEntity batchExportPdf(@RequestBody OrderDto orderDto) {
         try {
-            return new ResponseEntity<>(Result.buildSuccessResult(productService.findByCategoryType(orderDto.getOrderId())), HttpStatus.OK);
+            return new ResponseEntity<>(Result.buildSuccessResult(productService.findByCategoryType(orderDto.getOrderId()), "获取订单信息成功."), HttpStatus.OK);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             throw e;
