@@ -1,4 +1,6 @@
-package interview.didi;
+package interview.didi.first;
+
+import interview.didi.first.B;
 
 /**
  * @author sunxiaoyu3
