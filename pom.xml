@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>algorithm</groupId>
-    <artifactId>com.algorithm</artifactId>
+    <artifactId>algorithm</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
 
@@ -29,6 +29,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -50,9 +51,19 @@
             </exclusions>
         </dependency>
 
-
-
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

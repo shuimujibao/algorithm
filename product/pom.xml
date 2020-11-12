@@ -5,7 +5,7 @@
 
     <parent>
         <groupId>algorithm</groupId>
-        <artifactId>com.algorithm</artifactId>
+        <artifactId>algorithm</artifactId>
         <version>1.0</version>
     </parent>
 

@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>algorithm</groupId>
-        <artifactId>com.algorithm</artifactId>
+        <artifactId>algorithm</artifactId>
         <version>1.0</version>
     </parent>
 
@@ -31,8 +31,17 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
 
     </dependencies>
+
 
 </project>
