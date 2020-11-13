@@ -1,6 +1,7 @@
 package com.sun.order.repository;
 
-import com.sun.order.bean.OrderCategory;
+
+import bean.OrderCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

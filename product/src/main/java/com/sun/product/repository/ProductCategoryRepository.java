@@ -1,6 +1,6 @@
 package com.sun.product.repository;
 
-import com.sun.product.bean.ProductCategory;
+import bean.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

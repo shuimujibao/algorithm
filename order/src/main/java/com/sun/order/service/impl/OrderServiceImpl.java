@@ -1,6 +1,6 @@
 package com.sun.order.service.impl;
 
-import com.sun.order.bean.OrderCategory;
+import bean.OrderCategory;
 import com.sun.order.repository.OrderCategoryRepository;
 import com.sun.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;

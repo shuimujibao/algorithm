@@ -1,6 +1,6 @@
 package com.sun.product.service.impl;
 
-import com.sun.product.bean.ProductCategory;
+import bean.ProductCategory;
 import com.sun.product.repository.ProductCategoryRepository;
 import com.sun.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;

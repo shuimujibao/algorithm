@@ -27,7 +27,7 @@ public class Result<T> {
      */
     private Integer code;
 
-    public Result() {
+    private Result() {
 
     }
 
@@ -49,7 +49,7 @@ public class Result<T> {
     public Result(boolean b, T data) {
         super();
         this.success = b;
-        this.message = b == true ? "操作成功" : "操作失败";
+        this.message = b ? "操作成功" : "操作失败";
         this.data = data;
     }
 

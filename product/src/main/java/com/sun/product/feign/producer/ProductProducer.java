@@ -1,4 +1,4 @@
-package com.sun.product.controller;
+package com.sun.product.feign.producer;
 
 import com.sun.product.service.ProductService;
 import dto.ProductDto;
@@ -15,13 +15,13 @@ import javax.annotation.Resource;
 
 /**
  * @author sunxiaoyu3
- * @description 商品
- * @createTime 2020/11/05 19:45:00
+ * @description 对外提供商品服务
+ * @createTime 2020/11/13 09:26:00
  */
+
 @RestController
-@RequestMapping("product")
 @Slf4j
-public class ProductController {
+public class ProductProducer {
 
     @Resource
     ProductService productService;
@@ -36,5 +36,4 @@ public class ProductController {
             throw e;
         }
     }
-
 }

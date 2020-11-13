@@ -1,6 +1,6 @@
 package com.sun.order.service;
 
-import com.sun.order.bean.OrderCategory;
+import bean.OrderCategory;
 
 /**
  * @author sunxiaoyu3

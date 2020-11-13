@@ -1,6 +1,6 @@
 package com.sun.product.service;
 
-import com.sun.product.bean.ProductCategory;
+import bean.ProductCategory;
 
 /**
  * @author sunxiaoyu3
