@@ -1,0 +1,4 @@
+bean/OrderCategory.class
+dto/OrderDto.class
+dto/ProductDto.class
+bean/ProductCategory.class

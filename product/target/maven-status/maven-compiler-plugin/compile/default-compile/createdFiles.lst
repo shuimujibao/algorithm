@@ -1,0 +1,6 @@
+com/sun/product/controller/ProductController.class
+com/sun/product/service/impl/ProductServiceImpl.class
+com/sun/product/service/ProductService.class
+com/sun/product/repository/ProductCategoryRepository.class
+com/sun/product/feign/producer/ProductProducer.class
+com/sun/product/ProductApplication.class

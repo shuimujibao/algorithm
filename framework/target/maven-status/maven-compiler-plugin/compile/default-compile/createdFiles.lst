@@ -1,0 +1,5 @@
+constant/ConfigConstants.class
+framework/Result.class
+config/FeignConfiguration.class
+config/FeignLoggerConfiguration.class
+constant/ConfigConstants$FEIGN_CONSTANT.class

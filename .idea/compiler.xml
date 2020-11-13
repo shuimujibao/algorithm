@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="framework" />
         <module name="eruka" />
-        <module name="record" />
-        <module name="order" />
         <module name="product" />
+        <module name="order" />
+        <module name="model" />
+        <module name="record" />
+        <module name="framework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="eruka" target="1.8" />
       <module name="framework" target="1.8" />
       <module name="framework-a" target="1.5" />
+      <module name="model" target="1.8" />
       <module name="order" target="1.8" />
       <module name="product" target="1.8" />
       <module name="record" target="1.8" />
@@ -30,6 +32,7 @@
       <module name="algorithm" options="" />
       <module name="eruka" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="model" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="product" options="-parameters" />
       <module name="record" options="-parameters" />
