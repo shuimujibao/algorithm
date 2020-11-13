@@ -4,8 +4,6 @@ import com.sun.product.service.ProductService;
 import dto.ProductDto;
 import framework.Result;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,9 +26,9 @@ public class ProductProducer {
 
     @ResponseBody
     @RequestMapping("/findByCategoryType")
-    public ResponseEntity batchExportPdf(@RequestBody ProductDto productDto) {
+    public Result batchExportPdf(@RequestBody ProductDto productDto) {
         try {
-            return new ResponseEntity<>(Result.buildSuccessResult(productService.findByCategoryType(productDto.getCategoryId()), "获取商品种类信息成功."), HttpStatus.OK);
+            return Result.buildSuccessResult(productService.findByCategoryType(productDto.getCategoryId()), "获取商品种类信息成功.");
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             throw e;

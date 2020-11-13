@@ -1,6 +1,7 @@
 package com.sun.order.feign.consumer;
 
 import dto.ProductDto;
+import framework.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface ProductConsumer {
 
     @RequestMapping("/findByCategoryType")
-    String findByCategoryType(ProductDto productDto);
+    Result findByCategoryType(ProductDto productDto);
 }
