@@ -14,16 +14,16 @@ public class test {
 
         ExecutorService pool = Executors.newCachedThreadPool();
 
-        CountDownLatch countDownLatch = new CountDownLatch(10);
+        CountDownLatch countDownLatch = new CountDownLatch(100);
 
-        for (int i = 1; i <= 3; i++) {
-            pool.submit(new Worker(i, countDownLatch));
+        int n = 100;
+
+        for (int i = 0; i < 3; i++) {
+            pool.submit(new Worker(i, countDownLatch, n));
         }
 
-        System.out.println("闭锁的数量：" + countDownLatch.getCount());
         countDownLatch.await();
-
-        System.out.println("打印完毕！");
+        System.out.println("数字打印完毕！");
         pool.shutdown();
 
     }
