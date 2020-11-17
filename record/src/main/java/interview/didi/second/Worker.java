@@ -20,7 +20,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 7  --->    7%3=1   线程一
  * +-------------------------------+
  * <p>
- *
+ * <p>
  * 不打印不应该当前线程打印的数字
  * 如果此时不该打印是
  */
@@ -72,7 +72,7 @@ public class Worker implements Runnable {
 
     private void count(int i) {
         try {
-            System.out.println("当前第" + i + "次输出--->" + "线程ID为--->" + threadId + "输出数字--->" + i);
+            System.out.println("第" + i + "次输出===" + "当前线程ID为===" + threadId + "===输出数字===" + i);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

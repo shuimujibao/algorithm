@@ -9,14 +9,14 @@ import java.util.concurrent.Executors;
  * @description 三个线程交替打印一到100 主线程打印完毕
  * @createTime 2020/11/13 20:36:00
  */
-public class test {
+public class Test {
     public static void main(String[] args) throws InterruptedException {
 
         ExecutorService pool = Executors.newCachedThreadPool();
 
-        CountDownLatch countDownLatch = new CountDownLatch(100);
+        CountDownLatch countDownLatch = new CountDownLatch(10);
 
-        int n = 100;
+        int n = 10;
 
         for (int i = 0; i < 3; i++) {
             pool.submit(new Worker(i, countDownLatch, n));
