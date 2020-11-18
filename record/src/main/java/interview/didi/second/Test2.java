@@ -1,6 +1,5 @@
 package interview.didi.second;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -17,5 +16,6 @@ public class Test2 {
         for (int i = 0; i < 3; i++) {
             executorService.submit(new Worker2(i));
         }
+        executorService.shutdown();
     }
 }

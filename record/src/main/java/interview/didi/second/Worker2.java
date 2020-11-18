@@ -31,11 +31,8 @@ public class Worker2 implements Runnable {
                     if (count >= 101) {
                         break;
                     }
-                    try {
-                        c.await();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    c.await();
+
                 }
 
                 if (count >= 101) {
@@ -46,6 +43,8 @@ public class Worker2 implements Runnable {
 
                 c.signalAll();
 
+            } catch (Exception e) {
+                e.printStackTrace();
             } finally {
                 lock.unlock();
             }
