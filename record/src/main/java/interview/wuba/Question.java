@@ -44,8 +44,21 @@ public class Question {
         return myLink.getHead();
     }
 
-    public static ListNode revertLinkOne(ListNode head) {
-        return null;
+    private static ListNode revertLinkOne(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode pre = null;
+        ListNode curr = head;
+
+        while (curr != null) {
+            ListNode temp = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = temp;
+        }
+        return pre;
     }
 
 
