@@ -30,20 +30,15 @@ public class ReverseLinkedList {
      */
     class Solution {
         public ListNode reverseList(ListNode head) {
-
-            if (head == null)
-                return null;
-            ListNode preListNode = null;
-            ListNode nowListNode = head;
-
-
-            while (nowListNode != null) {
-                ListNode nextListNode = nowListNode.next;   //保存下一个结点
-                nowListNode.next = preListNode;             //当前结点指向前一个结点
-                preListNode = nowListNode;                  //前任结点 到现任节点
-                nowListNode = nextListNode;                    //现任节点到下一结点
+            ListNode prev = null;
+            ListNode curr = head;
+            while (curr != null) {
+                ListNode nextTemp = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = nextTemp;
             }
-            return preListNode;
+            return prev;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
