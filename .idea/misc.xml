@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/product/pom.xml" />
         <option value="$PROJECT_DIR$/order/pom.xml" />
         <option value="$PROJECT_DIR$/model/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
