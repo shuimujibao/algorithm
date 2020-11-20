@@ -11,7 +11,7 @@ public class Question {
 
 
     public static void main(String[] args) {
-        System.out.println(sum("99", "1"));
+        System.out.println(sum("909", "1"));
     }
 
     private static String sum(String a, String b) {
@@ -34,8 +34,10 @@ public class Question {
             stack2.add(Integer.parseInt(String.valueOf(temp)));
         }
 
+        //商
         int m = 0;
-        int n = 0;
+        //余数
+        int n;
         while (!stack1.empty() && !stack2.empty()) {
             n = (stack1.peek() + stack2.peek() + m) % 10;
             m = (stack1.peek() + stack2.peek()) / 10;
@@ -44,35 +46,30 @@ public class Question {
             result.add(n);
         }
 
-        int p = 0;
-        int q = 0;
-
+        //是否需要进位标志   ---  "9999" + "1"  此时为true
         boolean flag = (m != 0);
 
-        while (!stack1.empty()) {
+        Stack<Integer> stackTemp = stack1.empty() ? stack2 : stack1;
+
+        int p;
+        int q = 0;
+        while (!stackTemp.empty()) {
             if (flag) {
-                p = (stack1.peek() + m + q) % 10;
-                q = (stack1.peek() + m) / 10;
+                p = (stackTemp.peek() + m + q) % 10;
+                q = (stackTemp.peek() + m + q) / 10;
                 m = 0;
                 result.add(p);
             } else {
-                result.add(stack1.peek());
+                result.add(stackTemp.peek());
             }
-            stack1.pop();
+            stackTemp.pop();
         }
 
-        while (!stack2.empty()) {
-            if (flag) {
-                p = (stack2.peek() + m + q) % 10;
-                q = (stack2.peek() + m) / 10;
-                m = 0;
-                result.add(p);
-            } else {
-                result.add(stack2.peek());
-            }
-            stack2.pop();
+        if (q != 0) {
+            result.add(1);
         }
 
+        //求和结果
         while (!result.empty()) {
             sb.append(result.pop());
         }
