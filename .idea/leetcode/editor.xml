@@ -67,6 +67,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/NextGreaterElementIi.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/NextGreaterElementIi.java" />
+              <option name="questionId" value="503" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PathSum.java">
           <value>
             <LeetcodeEditor>
@@ -112,6 +120,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/ShuZuZhongZhongFuDeShuZiLcof.java" />
               <option name="questionId" value="100275" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/ValidParentheses.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/ValidParentheses.java" />
+              <option name="questionId" value="20" />
             </LeetcodeEditor>
           </value>
         </entry>
