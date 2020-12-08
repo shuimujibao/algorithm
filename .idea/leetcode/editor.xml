@@ -51,6 +51,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/IntersectionOfTwoLinkedListsLcci.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/IntersectionOfTwoLinkedListsLcci.java" />
+              <option name="questionId" value="100167" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LinkedListCycle.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LinkedListCycle.java" />
+              <option name="questionId" value="141" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LongestPalindromicSubstring.java">
           <value>
             <LeetcodeEditor>
