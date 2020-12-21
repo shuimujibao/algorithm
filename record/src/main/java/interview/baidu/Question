@@ -1,4 +1,8 @@
 1.如何获取一个对象(包含两个属性)运行期间的占用内存的大小 instrument(jvm 的钩子)
+（1）第一种：Instrumentation
+   使用java.lang.instrument 的Instrumentation来获取一个对象的内存大小。利用Instrumentation并且通过代理我们可以监测在JVM运行的程序的功能，它的原理是修改方法的字节码。
+
+
 2.自己实现一个springboot的stater （定一个接口 JPI）
 3.一条update语句的实现流程
 4.hashSet的实现逻辑
