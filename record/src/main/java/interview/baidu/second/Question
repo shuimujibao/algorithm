@@ -1,0 +1,39 @@
+1.jvm分区
+
+2.新生代垃圾回收过程
+
+3.
+class A{
+private int m;
+
+public void hello(){
+   int n;
+}
+}
+
+属性m  和属性n分别存储在jvm哪里
+
+4.synchronized的实现原理
+  什么时候会用到synchronized锁（A.class）
+  与ReentrantLock对比
+
+5.AQS原理
+
+6.数据库幻读是什么场景 mysql如何解决的幻读（间隙锁）
+
+7.死锁产生的原因
+
+9. class A{
+   @Transactional
+   public B(){
+       this.c()
+   }
+   @Transactional
+   public C(){
+   }
+}
+这种情况事物为什么会失效
+
+10.同一个事物的数据库链接 spring如何管理的  ----> ThreadLocal
+
+11.B树和B+树的区别
