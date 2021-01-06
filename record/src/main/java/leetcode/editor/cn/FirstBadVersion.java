@@ -46,4 +46,4 @@ public class FirstBadVersion{
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
-}
+//}
