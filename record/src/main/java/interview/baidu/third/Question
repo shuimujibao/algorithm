@@ -1,0 +1,12 @@
+1.RocketMq如何保证消息不丢失
+2.Mysql如何保证数据不丢
+3.Mysql都有哪些锁，及其对应的实现，哪些是默认加的
+4.MySql索引的存储结构
+5.Redis缓存的淘汰策略
+6.什么样的场景ThreadLocal会发生内存泄漏
+7.spring如何解决bean的循环依赖问题
+8.SpringBoot如何实现Stater
+9.JVM的内存结构 ，每一部分都存了什么
+10.JVM的优化方式
+11.G1垃圾回收器的回收过程
+12.java中 synchronized  与 ReentrantLock 实现原理 与 区别
