@@ -1,4 +1,4 @@
-package leetcode.reviewSort;
+package base.reviewSort;
 
 public class InsertSort {
     /**
