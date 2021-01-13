@@ -53,7 +53,6 @@ public class FanZhuanLianBiaoLcof {
     class Solution {
         public ListNode reverseList(ListNode head) {
             if (head == null || head.next == null) {
-                System.out.println("最后一个节点：" + (head == null ? null : head.val));
                 return head;
             }
             ListNode newHead = reverseList(head.next);
