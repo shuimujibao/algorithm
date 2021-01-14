@@ -30,15 +30,13 @@ public class ReverseLinkedList {
      */
     class Solution {
         public ListNode reverseList(ListNode head) {
-            ListNode prev = null;
-            ListNode curr = head;
-            while (curr != null) {
-                ListNode nextTemp = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = nextTemp;
-            }
-            return prev;
+            if (head == null || head.next == null)
+                return head;
+            ListNode temp = head.next;
+            ListNode newHead = reverseList(head.next);
+            temp.next = head;
+            head.next = null;
+            return newHead;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
