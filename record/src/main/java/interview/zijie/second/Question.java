@@ -2,12 +2,31 @@ package interview.zijie.second;
 
 import leetcode.editor.cn.TreeNode;
 
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * @author sunxiaoyu3
  * @description 算法
  * @createTime 2021/01/25 10:10:00
  */
 public class Question {
+
+    /**
+     * 模拟10000个请求的并发
+     *
+     * @param args 主函数
+     */
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(5);
+        for (int i = 0; i < 5; i++) {
+            executorService.submit(new Worker(cyclicBarrier));
+        }
+        executorService.shutdown();
+    }
+
 
     /**
      * 爬楼梯问题
@@ -34,4 +53,6 @@ public class Question {
     public void BFS(TreeNode root) {
 
     }
+
+
 }
