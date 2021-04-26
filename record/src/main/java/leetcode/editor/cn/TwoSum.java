@@ -16,6 +16,9 @@ package leetcode.editor.cn;
 // Related Topics 数组 哈希表 
 // 👍 9441 👎 0
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class TwoSum {
     public static void main(String[] args) {
         Solution solution = new TwoSum().new Solution();
@@ -26,14 +29,24 @@ public class TwoSum {
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             int[] result = new int[2];
+
+            HashMap<Integer, Integer> map = new HashMap<>();
             for (int i = 0; i < nums.length; i++) {
-                for (int j = i + 1; j < nums.length; j++) {
-                    if (nums[i] + nums[j] == target) {
-                        result[0] = i;
-                        result[1] = j;
-                    }
+                map.put(target - nums[i], i);
+            }
+
+            //3,0  4,1  2,2
+
+            Set<Integer> integers = map.keySet();
+
+            for (int i = 0; i < nums.length; i++) {
+                if (integers.contains(nums[i]) && map.get(nums[i]) != i) {
+                    result[0] = i;
+                    result[1] = map.get(nums[i]);
+                    return result;
                 }
             }
+
             return result;
         }
     }
