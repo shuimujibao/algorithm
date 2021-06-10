@@ -1,4 +1,4 @@
-package interview.aibaba;
+package interview.aibaba.first;
 
 /**
  * @author sunxiaoyu3

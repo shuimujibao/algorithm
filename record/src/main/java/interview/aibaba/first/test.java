@@ -1,4 +1,4 @@
-package interview.aibaba;
+package interview.aibaba.first;
 
 
 import lombok.Data;
