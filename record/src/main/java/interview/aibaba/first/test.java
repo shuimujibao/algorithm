@@ -19,9 +19,19 @@ public class test {
         bean.setA(5);
         add(bean);
         System.out.println(bean.toString());
+
+
+        String a = "hello";
+        add(a);
+        System.out.println(a);
     }
 
     private static void add(Bean bean) {
         bean.setA(bean.getA() + 1);
+    }
+
+    private static void add(String a) {
+        a = a + "hhh";
+        System.out.println("------"+a);
     }
 }
