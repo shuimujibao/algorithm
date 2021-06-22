@@ -1,4 +1,4 @@
-package interview.jingdong;
+package interview.jingdong.first;
 
 import java.util.PriorityQueue;
 
