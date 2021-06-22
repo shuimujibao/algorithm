@@ -1,4 +1,4 @@
-package multithread.threadcommunication.multiscene;
+package multithread.threadcommunication.syncwait.multiscene;
 
 /**
  * @author sunxiaoyu3

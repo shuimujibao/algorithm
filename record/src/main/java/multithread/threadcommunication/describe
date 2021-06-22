@@ -1,4 +1,4 @@
-wait()、notify() 和 notifyAll()方法是 本地方法，并且为 final 方法，无法被重写；
+一、wait()、notify() 和 notifyAll()方法是 本地方法，并且为 final 方法，无法被重写；
 
 上述三个方法均非Thread类中所声明的方法，而是Object类中声明的方法。
 原因是每个对象都拥有monitor（锁），所以让当前线程等待某个对象的锁，当然应该通过这个对象来操作，
@@ -7,3 +7,14 @@ wait()、notify() 和 notifyAll()方法是 本地方法，并且为 final 方法
 调用某个对象的 wait() 方法能让 当前线程阻塞，并且当前线程必须拥有此对象的monitor（即锁）；
 调用某个对象的 notify() 方法能够唤醒 一个正在等待这个对象的monitor的线程，如果有多个线程都在等待这个对象的monitor，则只能唤醒其中一个线程；
 调用notifyAll()方法能够唤醒所有正在等待这个对象的monitor的线程。
+
+二、Condition是在java 1.5中出现的，它用来替代传统的Object的wait()/notify()实现线程间的协作，
+它的使用依赖于 Lock，Condition、Lock 和 Thread 三者之间的关系如下图所示。
+相比使用Object的wait()/notify()，使用Condition的await()/signal()这种方式能够更加安全和高效地实现线程间协作。
+Condition是个接口，基本的方法就是await()和signal()方法。Condition依赖于Lock接口，生成一个Condition的基本代码是lock.newCondition() 。
+必须要注意的是，Condition 的 await()/signal() 使用都必须在lock保护之内，也就是说，必须在lock.lock()和lock.unlock之间才可以使用。
+事实上，Condition的await()/signal() 与 Object的wait()/notify() 有着天然的对应关系：
+
+Condition中的await()对应Object的wait()；
+Condition中的signal()对应Object的notify()；
+Condition中的signalAll()对应Object的notifyAll()；
