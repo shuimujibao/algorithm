@@ -53,27 +53,30 @@ public class ConvertSortedListToBinarySearchTree {
      */
     class Solution {
         public TreeNode sortedListToBST(ListNode head) {
-            if (head == null) {
-                return null;
-            }
-            return buildTreeNode(head, null);
+            return convert(head,null);
         }
-
-        public TreeNode buildTreeNode(ListNode head, ListNode tail) {
-            if (head == tail) {
+        //转换方法
+        public TreeNode convert(ListNode left,ListNode right){
+            if(left == right){
                 return null;
             }
-            ListNode fast = head;
-            ListNode slow = head;
-            //找到mid=slow
-            while (fast != tail && fast.next != tail) {
-                fast = fast.next.next;
-                slow = slow.next;
-            }
-            TreeNode root = new TreeNode(slow.val);
-            root.left = buildTreeNode(head, slow);
-            root.right = buildTreeNode(slow.next, fast);
+            //得到中间值,然后递归处理两边
+            ListNode mid = getMedian(left,right);
+            TreeNode root = new TreeNode(mid.val);
+            //right为null和mid,left为left和mid.next
+            root.left = convert(left,mid);
+            root.right = convert(mid.next,right);
             return root;
+        }
+        //中间值
+        public ListNode getMedian(ListNode left,ListNode right){
+            ListNode slow = left;
+            ListNode fast = left;
+            while(fast != right && fast.next != right){
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            return slow;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
