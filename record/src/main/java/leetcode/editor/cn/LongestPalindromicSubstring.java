@@ -26,32 +26,47 @@ public class LongestPalindromicSubstring {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public String longestPalindrome(String s) {
-            if (s == null || s.length() < 2) {
+            int length = s.length();
+            if (length < 2) {
                 return s;
             }
-            int strLen = s.length();
-            int maxStart = 0;  //最长回文串的起点
-            int maxEnd = 0;    //最长回文串的终点
-            int maxLen = 1;  //最长回文串的长度
+            //所有情况的字符串 值为当前字符串是否为回文的
+            boolean[][] dp = new boolean[length][length];
 
-            boolean[][] dp = new boolean[strLen][strLen];
+            //当前字符串
+            char[] charArray = s.toCharArray();
 
-            for (int r = 1; r < strLen; r++) {
-                for (int l = 0; l < r; l++) {
-                    if (s.charAt(l) == s.charAt(r) && (r - l <= 2 || dp[l + 1][r - 1])) {
-                        dp[l][r] = true;
-                        if (r - l + 1 > maxLen) {
-                            maxLen = r - l + 1;
-                            maxStart = l;
-                            maxEnd = r;
 
+            for (int i = 0; i < length; i++) {
+                //开始位置与起始位置相同 则肯定是回文的
+                dp[i][i] = true;
+            }
+
+            int maxLen = 1;
+            int begin = 0;
+
+            for (int j = 1; j < length; j++) {
+                for (int i = 0; i < j; i++) {
+                    if (charArray[i] != charArray[j]) {
+                        dp[i][j] = false;
+                    } else {
+                        if (j - i < 3) {
+                            dp[i][j] = true;
+                        } else {
+                            //要满足这个条件，必需先满足j - i > 3考虑边界
+                            dp[i][j] = dp[i + 1][j - 1];
                         }
                     }
 
+                    // 只要 dp[i][j] == true 成立，就表示子串 s[i..j] 是回文，此时记录回文长度和起始位置
+                    if (dp[i][j] && j - i + 1 > maxLen) {
+                        maxLen = j - i + 1;
+                        begin = i;
+                    }
                 }
-
             }
-            return s.substring(maxStart, maxEnd + 1);
+
+            return s.substring(begin, begin + maxLen);
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
