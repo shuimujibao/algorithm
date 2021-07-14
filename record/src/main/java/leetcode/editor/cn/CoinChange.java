@@ -62,23 +62,32 @@ public class CoinChange {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int coinChange(int[] coins, int amount) {
+
+            //目标值
             int[] f = new int[amount + 1];
+            //多少种硬币
             int n = coins.length;
+            //初始值
             f[0] = 0;
-            int i, j;
-            for (i = 1; i <= amount; i++) {
+
+            //罗列f(X)
+            for (int i = 1; i <= amount; i++) {
+                //默认初值
                 f[i] = Integer.MAX_VALUE;
-                for (j = 0; j < n; j++) {
-                    // 边界条件判断
+                for (int j = 0; j < n; j++) {
+                    //当前临界值，则避免了重复计算
                     if (i >= coins[j] && f[i - coins[j]] != Integer.MAX_VALUE) {
+                        //求当前值，所用硬币最小数量
                         f[i] = Math.min(f[i - coins[j]] + 1, f[i]);
-                        //  System.out.println(i + "=" +f[i]);
                     }
                 }
             }
+
+            //当前值 不存在改组合
             if (f[amount] == Integer.MAX_VALUE) {
                 f[amount] = -1;
             }
+
             return f[amount];
         }
     }
