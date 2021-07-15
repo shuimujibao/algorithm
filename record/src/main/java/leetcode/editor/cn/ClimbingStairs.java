@@ -43,17 +43,22 @@ public class ClimbingStairs {
          * @return 总的爬法
          */
         private int count(int ladder) {
-            if (ladder == 1 || ladder == 2) {
-                return ladder;
+
+            if (ladder == 1) {
+                return 1;
             }
-            int n1 = 1;
-            int n2 = 2;
+
+            int[] dp = new int[ladder + 1];
+            //一个台阶 一种走法
+            dp[1] = 1;
+            //两个台阶 两种走法
+            dp[2] = 2;
+
             for (int i = 3; i <= ladder; i++) {
-                int tmp = n2;
-                n2 = n1 + n2;
-                n1 = tmp;
+                dp[i] = dp[i - 1] + dp[i - 2];
             }
-            return n2;
+
+            return dp[ladder];
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
