@@ -267,6 +267,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LongestIncreasingSubsequence.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LongestIncreasingSubsequence.java" />
+              <option name="questionId" value="300" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/LongestPalindrome.java">
           <value>
             <LeetcodeEditor>
@@ -368,6 +376,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PalindromeNumber.java" />
               <option name="questionId" value="9" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PalindromePartitioning.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PalindromePartitioning.java" />
+              <option name="questionId" value="131" />
             </LeetcodeEditor>
           </value>
         </entry>
