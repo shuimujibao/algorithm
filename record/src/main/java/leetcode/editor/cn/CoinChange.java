@@ -74,11 +74,11 @@ public class CoinChange {
             for (int i = 1; i <= amount; i++) {
                 //默认初值
                 f[i] = Integer.MAX_VALUE;
-                for (int j = 0; j < n; j++) {
+                for (int coin : coins) {
                     //当前临界值，则避免了重复计算
-                    if (i >= coins[j] && f[i - coins[j]] != Integer.MAX_VALUE) {
+                    if (i >= coin && f[i - coin] != Integer.MAX_VALUE) {
                         //求当前值，所用硬币最小数量
-                        f[i] = Math.min(f[i - coins[j]] + 1, f[i]);
+                        f[i] = Math.min(f[i - coin] + 1, f[i]);
                     }
                 }
             }
