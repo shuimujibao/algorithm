@@ -27,6 +27,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/BestTimeToBuyAndSellStock.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/BestTimeToBuyAndSellStock.java" />
+              <option name="questionId" value="121" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/BinaryTreeInorderTraversal.java">
           <value>
             <LeetcodeEditor>
@@ -368,6 +376,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/NextGreaterElementIi.java" />
               <option name="questionId" value="503" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PalindromeLinkedList.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/record/src/main/java/leetcode/editor/cn/PalindromeLinkedList.java" />
+              <option name="questionId" value="234" />
             </LeetcodeEditor>
           </value>
         </entry>
