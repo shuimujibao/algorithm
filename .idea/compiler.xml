@@ -8,13 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eruka" />
-        <module name="product" />
-        <module name="order" />
         <module name="netty" />
+        <module name="order" />
         <module name="model" />
         <module name="record" />
+        <module name="product" />
         <module name="framework" />
         <module name="nacos" />
+        <module name="java8" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="eruka" target="1.8" />
       <module name="framework" target="1.8" />
       <module name="framework-a" target="1.5" />
+      <module name="java8" target="1.8" />
       <module name="model" target="1.8" />
       <module name="nacos" target="1.8" />
       <module name="netty" target="1.8" />
@@ -36,6 +38,7 @@
       <module name="algorithm" options="" />
       <module name="eruka" options="-parameters" />
       <module name="framework" options="-parameters" />
+      <module name="java8" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="nacos" options="-parameters" />
       <module name="netty" options="-parameters" />
