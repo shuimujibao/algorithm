@@ -8,8 +8,6 @@
         <option value="$PROJECT_DIR$/sytstem/pom.xml" />
         <option value="$PROJECT_DIR$/product/pom.xml" />
         <option value="$PROJECT_DIR$/order/pom.xml" />
-        <option value="$PROJECT_DIR$/model/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos/pom.xml" />
         <option value="$PROJECT_DIR$/netty/pom.xml" />
         <option value="$PROJECT_DIR$/java8/pom.xml" />
       </list>
@@ -17,6 +15,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/framework-a/pom.xml" />
+        <option value="$PROJECT_DIR$/model/pom.xml" />
         <option value="$PROJECT_DIR$/system/pom.xml" />
       </set>
     </option>

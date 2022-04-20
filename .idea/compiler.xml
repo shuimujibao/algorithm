@@ -9,12 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eruka" />
         <module name="netty" />
-        <module name="order" />
-        <module name="model" />
         <module name="record" />
-        <module name="product" />
         <module name="framework" />
-        <module name="nacos" />
         <module name="java8" />
       </profile>
     </annotationProcessing>

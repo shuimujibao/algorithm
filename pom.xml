@@ -17,12 +17,7 @@
     </parent>
 
     <modules>
-        <module>eruka</module>
         <module>record</module>
-        <module>product</module>
-        <module>framework</module>
-        <module>order</module>
-        <module>model</module>
     </modules>
 
     <properties>
